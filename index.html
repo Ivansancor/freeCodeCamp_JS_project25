@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokemon Search</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <main>
+        <h1>Pokemon Search App</h1>
+        <label for="search-input">Search for Pokemon name or ID:</label>
+        <input type="text" id="search-input" required>
+        <button id="search-button">Search</button>
+        <div class="pokemon-display">
+            <p><span id="pokemon-name">Pika</span><span id="pokemon-id">#20</span></p>
+            <p><span id="weight">Weight: 2kg</span><span id="height">Height: 60cm</span></p>
+            <span id="types">Electric</span>
+        </div>
+        <div class="pokemon-stats">
+            <div class="base">
+                <span class="stats-title">Base</span>
+                <span>HP:</span>
+                <span>Attack:</span>
+                <span>Defense:</span>
+                <span>Sp. Attack:</span>
+                <span>Sp. Defense:</span>
+                <span>Speed:</span>
+            </div>
+            <div class="stats">
+                <span class="stats-title">Stats</span>
+                <span id="hp">80</span>
+                <span id="attack">130</span>
+                <span id="defense">260</span>
+                <span id="special-attack">85</span>
+                <span id="special-defense">120</span>
+                <span id="speed">65</span>
+            </div>
+        </div>
+</main>
+    <script src="script.js"></script>
+</body>
+</html>

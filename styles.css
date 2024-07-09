@@ -1,0 +1,117 @@
+:root {
+    --main-color: rgb(209, 40, 88);
+    --secondary-color: rgb(25, 108, 74);
+    --info-color: rgb(217, 241, 233);
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 10px;
+}
+
+body {
+    font-size: 2.6rem;
+    background-color: var(--main-color);
+    color: white;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+main {
+    margin: 4rem auto;
+    padding: 3rem;
+    width: 50%;
+    background-color: var(--secondary-color);
+    border-radius: 3rem;
+}
+
+h1 {
+    text-transform: uppercase;
+    font-size: 4rem;
+    margin-bottom: 4rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 1rem;
+}
+
+input, button {
+    padding: 1rem;
+    font-size: 2rem;
+}
+
+button {
+    text-transform: uppercase;
+    background-color: var(--main-color);
+    color: white;
+    border: none;
+    cursor: pointer;
+    border: 0.3rem solid var(--main-color);
+
+}
+
+button:hover {
+    background-color: var(--info-color);
+    color: var(--main-color);
+    font-weight: 600;
+}
+
+.pokemon-display {
+    border: 0.5rem solid var(--main-color);
+    width: 80%;
+    height: 40rem;
+    margin: 5rem auto;
+    padding: 1rem;
+    background-color: var(--info-color);
+    color: black;
+    text-align: left;
+    position: relative;
+    font-size: 2rem;
+}
+
+.pokemon-display p {
+    margin-bottom: 1rem;
+}
+
+.pokemon-display span {
+    margin-left: 1rem;
+}
+
+#types {
+    display: block;
+    position: absolute;
+    left: 1rem;
+    bottom: 1rem;
+}
+
+.pokemon-stats {
+    width: 80%;
+    padding: 1rem;
+    margin: 0 auto 4rem;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.base, .stats {
+    width: 40%;
+}
+
+.stats-title {
+    text-transform: uppercase;
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+    border-bottom: 0.3rem solid white;
+}
+
+.base span, .stats span{
+    display: block;
+    margin-bottom: 1rem;
+}
