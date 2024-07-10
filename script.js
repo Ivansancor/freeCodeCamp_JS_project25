@@ -29,6 +29,7 @@ const validateInput = input => {
     return validatedInput;
 };
 
+
 const searchPokemon = async () => {
     if (searchInput.value === "") {
         alert("Please enter a Pokémon name or ID")
@@ -37,7 +38,24 @@ const searchPokemon = async () => {
         try {
             const res = await fetch(specificPokeEndpoint + validatedInput);
             const data = await res.json();
+            const {name, id, weight, height, types, sprites} = data;
+            const defaultSpriteUrl = sprites["front_default"];
+            let typesArr = [];
+            for(let type of types){
+                typesArr.push(type["type"].name);
+            }
             console.log(data);
+            console.log(typesArr);
+            
+            pokemonName.textContent = name;
+            pokemonId.textContent = "#" + id;
+            pokemonWeight.textContent = "Weight: " + weight;
+            pokemonHeight.textContent = "Height: " + height;
+            pokemonTypes.textContent = typesArr.join(", ");
+
+            const pokemonImg = document.createElement("img");
+            pokemonImg.innerText = `src="${defaultSpriteUrl}" alt="${name}-image"`;
+            pokemonTypes.parentElement.insertBefore(pokemonImg, pokemonTypes);
         }
         catch (err) {
             alert("Pokémon not found");
